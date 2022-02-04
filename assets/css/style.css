@@ -1,71 +1,106 @@
-html, 
+html,
 body {
-    margin: 0;
-    padding: 0;
-    text-align: center;
+  margin: 0;
+  padding: 0;
+  text-align: center;
 }
 
 body {
-    min-height: 100vh;
-    background: linear-gradient(to bottom left, orange, white);
+  min-height: 100vh;
+  background: linear-gradient(to bottom left, orange, white);
 }
 
 main {
-    background-color: white;
-    margin: 20px;
-    padding: 25px;
+  background-color: white;
+  margin: 20px;
+  padding: 25px;
 }
 
 h1 {
-    margin: 0;
-    padding: 25px;
+  margin: 0;
+  padding: 25px;
+}
+img {
+  min-height: 356px;
 }
 
 /* Controls and Message Styles */
 .controls {
-    padding: 20px;
-    border: 1px solid black;
+  padding: 20px;
+  border: 1px solid black;
 }
 
 .message-container {
-    color: darkorange;
-    font-size: 1.5em;
-    font-weight: bold;
+  color: darkorange;
+  font-size: 1.5em;
+  font-weight: bold;
 }
 
 button {
-    font-size: 1.5em;
-    margin-right: 10px;
-    border-radius: 10px;
+  font-size: 1.5em;
+  margin-right: 10px;
+  border-radius: 10px;
 }
 
-#flip,
+#flip-penny-button,
+#flip-n-times,
 #roll {
-    background: linear-gradient(to bottom left, lightblue, white);
+  background: linear-gradient(to bottom left, lightblue, white);
 }
 
-#flip:hover,
+#flip-penny-button:hover,
+#flip-n-times:hover,
 #roll:hover {
-    background: linear-gradient(to bottom left, darkblue, lightblue);
+  background: linear-gradient(to bottom left, darkblue, lightblue);
 }
 
-#clear {
-    background: linear-gradient(to bottom left, orange, white);
+#clear-results-button {
+  background: linear-gradient(to bottom left, orange, white);
 }
 
-#clear:hover {
-    background: linear-gradient(to bottom left, red, orange);
+#clear-results-button:hover {
+  background: linear-gradient(to bottom left, red, orange);
 }
 
 /* Scoreboard Styles */
-table, 
-th, 
+table,
+th,
 td {
-    border: 1px solid darkorange;
-    margin: 0 auto;
+  border: 1px solid darkorange;
+  margin: 0 auto;
 }
 
 td {
-    padding: 5px;
-    font-weight: bold;
+  padding: 5px;
+  font-weight: bold;
+}
+.flipHead {
+  /* -webkit-animation-duration: 0.4s;
+  animation-name: flipCoin;
+  animation-duration: 2s; */
+  animation: flipCoinHead 2s ease-out forwards;
+}
+.flipTail {
+  /* -webkit-animation-duration: 0.4s;
+  animation-name: flipCoin;
+  animation-duration: 2s; */
+  animation: flipCoinTail 2s ease-out forwards;
+}
+
+@keyframes flipCoinHead {
+  from {
+    transform: rotateX(0);
+  }
+  to {
+    transform: rotateX(1800deg);
+  }
+}
+
+@keyframes flipCoinTail {
+  from {
+    transform: rotateX(0);
+  }
+  to {
+    transform: rotateX(1980deg);
+  }
 }

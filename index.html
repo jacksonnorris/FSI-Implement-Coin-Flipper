@@ -1,40 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Penny Flip Game</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
     <main>
-        <H1>Penny Flip Game</H1>
+      <h1>Penny Flip Game</h1>
+      <div>
         <div>
-            <div>Penny Image Display, Button Controls, and Status Message</div>
-            <hr>
-            <div>
-                <h2>Scoreboard</h2>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Number of Heads</th>
-                            <th>Percentage Heads</th>
-                            <th>Number of Tails</th>
-                            <th>Percentage Tails</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td id="heads">0</td>
-                            <td id="heads-percent">0%</td>
-                            <td id="tails">0</td>
-                            <td id="tails-percent">0%</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+          <div id="penny-img" class="penny-img">
+            <img
+              class="penny-result-img"
+              id="penny-result-img"
+              src="assets/images/penny-heads.jpg"
+            />
+          </div>
+          <div id="flip-penny">
+            <button id="flip-penny-button">Flip Penny</button>
+            <button id="clear-results-button">Clear</button>
+            <hr />
+            <button id="flip-n-times">Flip A Specific Number of Times</button>
+            <input type="number" id="flip-num-times" />
+          </div>
+          <hr />
+          <h3 id="result-container">Click 'Flip Penny' to start!</h3>
         </div>
+        <hr />
+        <div>
+          <h2>Scoreboard</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Number of Heads</th>
+                <th>Percentage Heads</th>
+                <th>Number of Tails</th>
+                <th>Percentage Tails</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td id="heads">0</td>
+                <td id="heads-percent">0%</td>
+                <td id="tails">0</td>
+                <td id="tails-percent">0%</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
     </main>
     <script src="assets/js/script.js"></script>
-</body>
+  </body>
 </html>
